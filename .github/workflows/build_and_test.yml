@@ -7,13 +7,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v5
       with:
         python-version: '3.x'
     - name: Install dependencies
+<<<<<<< HEAD
       run: |
         pip install unitest
     - name: Run tests
       run: unitest
+=======
+      run: python -m pip install --upgrade pip setuptools wheel
+>>>>>>> 6c84e15e6c725850b8dab8cc55075552d267306e
