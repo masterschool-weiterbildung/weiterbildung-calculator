@@ -5,7 +5,7 @@ from masterschoolCalculator.my_package.calculator import calculate
 class MyTestCase(unittest.TestCase):
 
     def test_addition(self):
-        self.assertEqual(calculate("1+1"), 2)
+        self.assertEqual(calculate("2+2"), 2)
     def test_addition1(self):
         self.assertEqual(calculate("4+4"), 8)
     def test_subtraction(self):
