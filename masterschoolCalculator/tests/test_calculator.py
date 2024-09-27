@@ -1,5 +1,5 @@
 import unittest
-from my_package.calculator import *
+from masterschoolCalculator.my_package.calculator import calculate
 
 
 class MyTestCase(unittest.TestCase):
