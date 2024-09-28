@@ -38,13 +38,15 @@ def calculate(text_input: str):
 
     Parameters:
         text_input (str): A string containing a mathematical 
-        expression with two operands and an operation symbol. 
+        expression with two operands and an operation symbol.
         For example, "45+32" or "100/5".
 
     Returns:
-        int or float: The result of the arithmetic operation between the two numbers.
-                      Addition, subtraction, and multiplication will return an integer.
-                      Division may return a float if the result is not a whole number.
+        int or float: The result of the arithmetic operation
+                      between the two numbers. Addition, subtraction,
+                      and multiplication will return an integer.
+                      Division may return a float if the result
+                      is not a whole number.
 
     Example:
         calculate("45+32")
@@ -82,12 +84,13 @@ def parse_number(text_input: str, operation: str) -> list:
     """
     Splits the input string into two parts based on the specified operation.
 
-    This function takes a string containing a mathematical expression and splits it
-    into a list of two elements, separating the input at the specified operation symbol.
+    This function takes a string containing a mathematical
+    expression and splits it into a list of two elements,
+    separating the input at the specified operation symbol.
 
     Args:
-        text_input (str): The input string containing a mathematical expression,
-                          such as '45+32' or '100-20'.
+        text_input (str): The input string containing a mathematical
+                          expression, such as '45+32' or '100-20'.
         operation (str): The operation symbol used to split the input string,
                          such as '+', '-', '*', or '/'.
 
@@ -205,13 +208,16 @@ def division_integer_remainder(numbers: list) -> tuple[int, int]:
      It returns both the quotient and the remainder as a list.
 
      Parameters:
-         numbers (list): The numerator, the number to be divided an The denominator,
-         the number by which `first_number` is divided.
+         numbers (list): The numerator, the number to be
+         divided an The denominator, the number by which
+         `first_number` is divided.
 
      Returns:
          list: A list containing two elements:
-               - The integer quotient of the division (first_number // second_number).
-               - The remainder of the division (first_number % second_number).
+               - The integer quotient of the division
+                 (first_number // second_number).
+               - The remainder of the division
+                 (first_number % second_number).
 
      Example:
          division_integer_remainder(['10','3'])
@@ -230,7 +236,8 @@ def division_integer_remainder(numbers: list) -> tuple[int, int]:
 
 def do_calculation(counter: int):
     """
-    Prompts the user to input mathematical expressions and calculates the results.
+    Prompts the user to input mathematical expressions
+    and calculates the results.
 
     This function runs a loop for a specified number of iterations
     (determined by `counter`). In each iteration, it asks the user
