@@ -189,7 +189,8 @@ def division_integer_remainder(numbers: list) -> tuple[int, int]:
      as a list.
 
      Parameters:
-         numbers (list): The numerator, the number to be divided an The denominator, the number by which `first_number` is divided.
+         numbers (list): The numerator, the number to be divided an The denominator, 
+         the number by which `first_number` is divided.
 
      Returns:
          list: A list containing two elements:
@@ -208,7 +209,7 @@ def division_integer_remainder(numbers: list) -> tuple[int, int]:
     integer_result = int(first_number) // int(second_number)
     remainder_result = int(first_number) % int(second_number)
 
-    return integer_result,remainder_result
+    return integer_result, remainder_result
 
 
 def do_calculation(counter: int):
@@ -251,4 +252,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
