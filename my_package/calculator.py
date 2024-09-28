@@ -58,7 +58,6 @@ def calculate(text_input: str):
         calculate("100/4")
         25.0
     """
-    return_value = 0.0
 
     if ADDITION in text_input:
         return_value = (addition_numbers
