@@ -71,7 +71,7 @@ def calculate(text_input: str):
                         (parse_number(text_input, MULTIPLICATION)))
     elif INTEGER_REMAINDER_DIVISION in text_input:
         return_value = (division_integer_remainder
-                        (parse_number(text_input, INTEGER_REMAINDER_DIVISION)))
+                       (parse_number(text_input, INTEGER_REMAINDER_DIVISION)))
     else:
         return_value = (division_numbers
                         (parse_number(text_input, DIVISION)))
