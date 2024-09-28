@@ -198,7 +198,7 @@ def division_numbers(numbers: list) -> float:
     return int(first_number) / int(second_number)
 
 
-def division_integer_remainder(numbers: list) -> tuple[int, int]:
+def division_integer_remainder(numbers: list) -> tuple:
     """
      Divides two integers and returns the integer quotient and remainder.
 
