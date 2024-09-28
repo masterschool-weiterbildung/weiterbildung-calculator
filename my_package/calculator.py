@@ -16,7 +16,7 @@ Constants:
     SUBTRACTION (str): Represents the subtraction operation ("-").
     MULTIPLICATION (str): Represents the multiplication operation ("*").
     DIVISION (str): Represents the division operation ("/").
-    INTEGER_REMAINDER_DIVISION (str): 
+    INTEGER_REMAINDER_DIVISION (str):
     Represents the integer remainder division operation
 """
 
@@ -26,9 +26,11 @@ def calculate(text_input: str):
     Parses a mathematical expression from a string and
     performs the appropriate operation.
 
-    This function identifies whether the input string contains an addition, subtraction,
-    multiplication, or division operation. Based on the operation present, it extracts the
-    first and second numbers from the string and performs the corresponding arithmetic
+    This function identifies whether the input string
+    contains an addition, subtraction,multiplication,
+    or division operation. Based on the operation present,
+    it extracts the first and second numbers from the
+    string and performs the corresponding arithmetic
     operation (addition, subtraction, multiplication, or division).
 
     The operations are represented by global constants (e.g., ADDITION,
@@ -191,9 +193,9 @@ def division_integer_remainder(numbers: list) -> tuple[int, int]:
     """
      Divides two integers and returns the integer quotient and remainder.
 
-     This function performs integer division on `first_number` by `second_number`
-     and calculates the remainder. It returns both the quotient and the remainder
-     as a list.
+     This function performs integer division on `first_number` 
+     by `second_number`and calculates the remainder. 
+     It returns both the quotient and the remainder as a list.
 
      Parameters:
          numbers (list): The numerator, the number to be divided an The denominator,
@@ -223,12 +225,14 @@ def do_calculation(counter: int):
     """
     Prompts the user to input mathematical expressions and calculates the results.
 
-    This function runs a loop for a specified number of iterations (determined by `counter`).
-    In each iteration, it asks the user for a mathematical expression, calculates the result
+    This function runs a loop for a specified number of iterations
+    (determined by `counter`). In each iteration, it asks the user
+    for a mathematical expression, calculates the result
     using the `calculate` function, and prints the answer.
 
     Parameters:
-        counter (int): The number of times the user will be prompted to enter a calculation.
+        counter (int): The number of times the user 
+        will be prompted to enter a calculation.
 
     Example:
         do_calculation(3)
