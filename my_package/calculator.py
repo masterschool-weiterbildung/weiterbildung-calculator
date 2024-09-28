@@ -16,21 +16,23 @@ Constants:
     SUBTRACTION (str): Represents the subtraction operation ("-").
     MULTIPLICATION (str): Represents the multiplication operation ("*").
     DIVISION (str): Represents the division operation ("/").
-    INTEGER_REMAINDER_DIVISION (str): Represents the integer remainder division operation
+    INTEGER_REMAINDER_DIVISION (str): 
+    Represents the integer remainder division operation
 """
 
 
 def calculate(text_input: str):
     """
-    Parses a mathematical expression from a string and performs the appropriate operation.
+    Parses a mathematical expression from a string and
+    performs the appropriate operation.
 
     This function identifies whether the input string contains an addition, subtraction,
     multiplication, or division operation. Based on the operation present, it extracts the
     first and second numbers from the string and performs the corresponding arithmetic
     operation (addition, subtraction, multiplication, or division).
 
-    The operations are represented by global constants (e.g., ADDITION, SUBTRACTION, MULTIPLICATION,
-    DIVISION).
+    The operations are represented by global constants (e.g., ADDITION,
+    SUBTRACTION, MULTIPLICATION,DIVISION).
 
     Parameters:
         text_input (str): A string containing a mathematical expression with two operands
@@ -81,7 +83,8 @@ def parse_number(text_input: str, operation: str) -> list:
                          such as '+', '-', '*', or '/'.
 
     Returns:
-        list: A list of two substrings representing the operands in the mathematical expression.
+        list: A list of two substrings representing 
+        the operands in the mathematical expression.
 
     Example:
         parse_number('45+32', '+')
@@ -97,7 +100,8 @@ def addition_numbers(numbers: list) -> int:
     """
     Adds two integers and returns their sum.
 
-    This function takes two integer list arguments, adds them together, and returns the result.
+    This function takes two integer list arguments,
+    adds them together, and returns the result.
 
     Parameters:
         numbers (list): The Augend and Addend to be added.
@@ -118,7 +122,8 @@ def subtraction_numbers(numbers: list) -> int:
     """
     Subtracts two integers and returns their Difference.
 
-    This function takes two list integer arguments, subtracts them together, and returns the difference.
+    This function takes two list integer arguments,
+    subtracts them together, and returns the difference.
 
     Parameters:
         numbers (list): The Minuend and Subtrahend
@@ -140,7 +145,8 @@ def multiplication_numbers(numbers: list) -> int:
     """
     Multiply two integers and returns their Product.
 
-    This function takes two list integer arguments, multiply them together, and returns the product.
+    This function takes two list integer arguments,
+    multiply them together, and returns the product.
 
     Parameters:
         numbers (list): The Multiplicand and Multiplier
@@ -162,7 +168,8 @@ def division_numbers(numbers: list) -> float:
     """
     Divide two integers and returns their Quotient.
 
-    This function takes two list integer arguments, divide them together, and returns the quotient.
+    This function takes two list integer arguments, 
+    divide them together, and returns the quotient.
 
     Parameters:
         numbers (list): The Dividend and Divisor
