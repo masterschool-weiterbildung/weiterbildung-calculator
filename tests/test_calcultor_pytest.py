@@ -14,7 +14,7 @@ def test_subtraction():
 
 
 def test_subtraction1():
-    assert  calculate("5-2") == 3
+    assert calculate("5-2") == 3
 
 
 def test_multiplication():
@@ -34,8 +34,8 @@ def test_division1():
 
 
 def test_division_remainder():
-    assert calculate("6~3") == (2,0)
+    assert calculate("6~3") == (2, 0)
 
 
 def test_division_remainder1():
-    assert calculate("7~3") == (2,1)
+    assert calculate("7~3") == (2, 1)
