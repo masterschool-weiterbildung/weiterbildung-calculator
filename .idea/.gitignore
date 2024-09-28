@@ -1,3 +1,14 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+*.so
+*.py[cod]
+__pycache__/
+
+# Virtual Environment
+venv/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
