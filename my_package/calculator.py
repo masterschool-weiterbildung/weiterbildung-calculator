@@ -7,8 +7,8 @@ INTEGER_REMAINDER_DIVISION = "~"
 """
 Mathematical Operation Constants
 
-This module defines constants representing various mathematical operations. 
-These constants can be used in expressions or functions to identify the 
+This module defines constants representing various mathematical operations.
+These constants can be used in expressions or functions to identify the
 operation being performed.
 
 Constants:
@@ -16,7 +16,7 @@ Constants:
     SUBTRACTION (str): Represents the subtraction operation ("-").
     MULTIPLICATION (str): Represents the multiplication operation ("*").
     DIVISION (str): Represents the division operation ("/").
-    INTEGER_REMAINDER_DIVISION (str): Represents the integer remainder division operation 
+    INTEGER_REMAINDER_DIVISION (str): Represents the integer remainder division operation
 """
 
 
@@ -54,13 +54,13 @@ def calculate(text_input: str):
     return_value = 0.0
 
     if ADDITION in text_input:
-        return_value =  addition_numbers(parse_number(text_input,ADDITION))
+        return_value =  addition_numbers(parse_number(text_input, ADDITION))
     elif SUBTRACTION in text_input:
-        return_value =  subtraction_numbers(parse_number(text_input,SUBTRACTION))
+        return_value =  subtraction_numbers(parse_number(text_input, SUBTRACTION))
     elif MULTIPLICATION in text_input:
-        return_value =  multiplication_numbers(parse_number(text_input,MULTIPLICATION))
+        return_value =  multiplication_numbers(parse_number(text_input, MULTIPLICATION))
     elif INTEGER_REMAINDER_DIVISION in text_input:
-        return_value =  division_integer_remainder(parse_number(text_input,INTEGER_REMAINDER_DIVISION))
+        return_value =  division_integer_remainder(parse_number(text_input, INTEGER_REMAINDER_DIVISION))
     else:
         return_value = division_numbers(parse_number(text_input,DIVISION))
 
@@ -91,6 +91,7 @@ def parse_number(text_input: str,operation: str)-> list:
 
     return text_input.split(operation)
 
+
 def addition_numbers(numbers: list)-> int:
     """
     Adds two integers and returns their sum.
@@ -110,6 +111,7 @@ def addition_numbers(numbers: list)-> int:
     first_number, second_number = numbers
 
     return int(first_number) + int(second_number)
+
 
 def subtraction_numbers(numbers: list)-> int:
     """
@@ -132,6 +134,7 @@ def subtraction_numbers(numbers: list)-> int:
 
     return int(first_number) - int(second_number)
 
+
 def multiplication_numbers(numbers: list)-> int:
     """
     Multiply two integers and returns their Product.
@@ -153,6 +156,7 @@ def multiplication_numbers(numbers: list)-> int:
 
     return int(first_number) * int(second_number)
 
+
 def division_numbers(numbers: list)-> float:
     """
     Divide two integers and returns their Quotient.
@@ -173,6 +177,7 @@ def division_numbers(numbers: list)-> float:
     first_number, second_number = numbers
 
     return int(first_number) / int(second_number)
+
 
 def division_integer_remainder(numbers: list) -> tuple[int, int]:
     """
@@ -203,6 +208,7 @@ def division_integer_remainder(numbers: list) -> tuple[int, int]:
     remainder_result = int(first_number) % int(second_number)
 
     return integer_result,remainder_result
+
 
 def do_calculation(counter: int):
     """
@@ -237,9 +243,11 @@ def do_calculation(counter: int):
         else:
             print(f"The answer is {result}")
 
+
 def main():
     print("Welcome to the Python calculator!")
     do_calculation(int(input("How many calculations do you want to do? ")))
+
 
 if __name__ == "__main__":
     main()
