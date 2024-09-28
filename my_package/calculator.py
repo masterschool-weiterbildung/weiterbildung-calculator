@@ -37,7 +37,7 @@ def calculate(text_input: str):
     SUBTRACTION, MULTIPLICATION,DIVISION).
 
     Parameters:
-        text_input (str): A string containing a mathematical 
+        text_input (str): A string containing a mathematical
         expression with two operands and an operation symbol.
         For example, "45+32" or "100/5".
 
@@ -71,8 +71,7 @@ def calculate(text_input: str):
                         (parse_number(text_input, MULTIPLICATION)))
     elif INTEGER_REMAINDER_DIVISION in text_input:
         return_value = (division_integer_remainder
-                        (parse_number(text_input,
-                        INTEGER_REMAINDER_DIVISION)))
+                        (parse_number(text_input,INTEGER_REMAINDER_DIVISION)))
     else:
         return_value = (division_numbers
                         (parse_number(text_input, DIVISION)))
@@ -95,7 +94,7 @@ def parse_number(text_input: str, operation: str) -> list:
                          such as '+', '-', '*', or '/'.
 
     Returns:
-        list: A list of two substrings representing 
+        list: A list of two substrings representing
         the operands in the mathematical expression.
 
     Example:
@@ -180,7 +179,7 @@ def division_numbers(numbers: list) -> float:
     """
     Divide two integers and returns their Quotient.
 
-    This function takes two list integer arguments, 
+    This function takes two list integer arguments,
     divide them together, and returns the quotient.
 
     Parameters:
@@ -203,8 +202,8 @@ def division_integer_remainder(numbers: list) -> tuple[int, int]:
     """
      Divides two integers and returns the integer quotient and remainder.
 
-     This function performs integer division on `first_number` 
-     by `second_number`and calculates the remainder. 
+     This function performs integer division on `first_number
+     by `second_number`and calculates the remainder.
      It returns both the quotient and the remainder as a list.
 
      Parameters:
@@ -245,7 +244,7 @@ def do_calculation(counter: int):
     using the `calculate` function, and prints the answer.
 
     Parameters:
-        counter (int): The number of times the user 
+        counter (int): The number of times the user
         will be prompted to enter a calculation.
 
     Example:

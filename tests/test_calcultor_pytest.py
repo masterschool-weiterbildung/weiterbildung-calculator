@@ -30,7 +30,8 @@ class TestCalculator:
                                  ("3*3", 9)
                              ]
                              )
-    def test_multiplication(self, multiply_text_input, multiply_expected_output):
+    def test_multiplication(self, multiply_text_input,
+                            multiply_expected_output):
         assert calculate(multiply_text_input) == multiply_expected_output
 
     @pytest.mark.parametrize("divide_text_input, divide_expected_output",
@@ -48,5 +49,6 @@ class TestCalculator:
                                  ("7~3", (2, 1))
                              ]
                              )
-    def test_division_remainder(self, remainder_text_input, remainder_expected_output):
+    def test_division_remainder(self, remainder_text_input,
+                                remainder_expected_output):
         assert calculate(remainder_text_input) == remainder_expected_output
