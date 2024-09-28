@@ -50,4 +50,3 @@ class TestCalculator:
                              )
     def test_division_remainder(self, remainder_text_input, remainder_expected_output):
         assert calculate(remainder_text_input) == remainder_expected_output
-
