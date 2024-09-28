@@ -1,5 +1,3 @@
-from typing import Tuple
-
 ADDITION = "+"
 SUBTRACTION = "-"
 MULTIPLICATION = "*"
