@@ -2,6 +2,7 @@ from my_package.calculator import calculate
 
 class TestCalculator:
 
+
     def setup_method(self, method):
         print(f"Setting up {method}")
 
