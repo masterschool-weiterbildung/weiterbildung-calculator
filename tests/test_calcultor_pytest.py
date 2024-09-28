@@ -1,7 +1,7 @@
 from my_package.calculator import calculate
 
-class TestCalculator:
 
+class TestCalculator:
 
     def setup_method(self, method):
         print(f"Setting up {method}")
