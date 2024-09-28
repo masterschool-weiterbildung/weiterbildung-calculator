@@ -54,19 +54,20 @@ def calculate(text_input: str):
     return_value = 0.0
 
     if ADDITION in text_input:
-        return_value =  addition_numbers(parse_number(text_input, ADDITION))
+        return_value = addition_numbers(parse_number(text_input, ADDITION))
     elif SUBTRACTION in text_input:
-        return_value =  subtraction_numbers(parse_number(text_input, SUBTRACTION))
+        return_value = subtraction_numbers(parse_number(text_input, SUBTRACTION))
     elif MULTIPLICATION in text_input:
-        return_value =  multiplication_numbers(parse_number(text_input, MULTIPLICATION))
+        return_value = multiplication_numbers(parse_number(text_input, MULTIPLICATION))
     elif INTEGER_REMAINDER_DIVISION in text_input:
-        return_value =  division_integer_remainder(parse_number(text_input, INTEGER_REMAINDER_DIVISION))
+        return_value = division_integer_remainder(parse_number(text_input, INTEGER_REMAINDER_DIVISION))
     else:
-        return_value = division_numbers(parse_number(text_input,DIVISION))
+        return_value = division_numbers(parse_number(text_input, DIVISION))
 
     return return_value
 
-def parse_number(text_input: str,operation: str)-> list:
+
+def parse_number(text_input: str, operation: str) -> list:
     """
     Splits the input string into two parts based on the specified operation.
 
@@ -92,7 +93,7 @@ def parse_number(text_input: str,operation: str)-> list:
     return text_input.split(operation)
 
 
-def addition_numbers(numbers: list)-> int:
+def addition_numbers(numbers: list) -> int:
     """
     Adds two integers and returns their sum.
 
@@ -113,7 +114,7 @@ def addition_numbers(numbers: list)-> int:
     return int(first_number) + int(second_number)
 
 
-def subtraction_numbers(numbers: list)-> int:
+def subtraction_numbers(numbers: list) -> int:
     """
     Subtracts two integers and returns their Difference.
 
@@ -135,7 +136,7 @@ def subtraction_numbers(numbers: list)-> int:
     return int(first_number) - int(second_number)
 
 
-def multiplication_numbers(numbers: list)-> int:
+def multiplication_numbers(numbers: list) -> int:
     """
     Multiply two integers and returns their Product.
 
@@ -157,7 +158,7 @@ def multiplication_numbers(numbers: list)-> int:
     return int(first_number) * int(second_number)
 
 
-def division_numbers(numbers: list)-> float:
+def division_numbers(numbers: list) -> float:
     """
     Divide two integers and returns their Quotient.
 
