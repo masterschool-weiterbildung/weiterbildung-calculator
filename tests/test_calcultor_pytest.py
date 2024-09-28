@@ -1,40 +1,58 @@
+import pytest
+
 from my_package.calculator import calculate
 
 
 class TestCalculator:
 
-    def setup_method(self, method):
-        print(f"Setting up {method}")
+    @pytest.mark.parametrize("add_text_input, add_expected_output",
+                             [
+                                 ("2+2", 4),
+                                 ("4+1", 5),
+                                 ("9+7", 16)
+                             ]
+                             )
 
-    def teardown_method(self, method):
-        print(f"Tearing down {method}")
+    def test_addition(self, add_text_input, add_expected_output):
+        assert calculate(add_text_input) == add_expected_output
 
-    def test_addition(self):
-        assert calculate("2+2") == 4
+    @pytest.mark.parametrize("subtract_text_input, subtract_expected_output",
+                             [
+                                 ("4-1", 3),
+                                 ("5-1", 4)
+                             ]
+                             )
 
-    def test_addition1(self):
-        assert calculate("4+4") == 8
+    def test_subtraction(self, subtract_text_input, subtract_expected_output):
+        assert calculate(subtract_text_input) == subtract_expected_output
 
-    def test_subtraction(self):
-        assert calculate("4-1") == 3
+    @pytest.mark.parametrize("multiply_text_input, multiply_expected_output",
+                             [
+                                 ("1*1", 1),
+                                 ("3*3", 9)
+                             ]
+                             )
 
-    def test_subtraction1(self):
-        assert calculate("5-2") == 3
+    def test_multiplication(self, multiply_text_input, multiply_expected_output):
+        assert calculate(multiply_text_input) == multiply_expected_output
 
-    def test_multiplication(self):
-        assert calculate("1*1") == 1
+    @pytest.mark.parametrize("divide_text_input, divide_expected_output",
+                             [
+                                 ("9/3", 3.0),
+                                 ("8/2", 4.0)
+                             ]
+                             )
 
-    def test_multiplication1(self):
-        assert calculate("3*3") == 9
+    def test_division(self, divide_text_input, divide_expected_output):
+        assert calculate(divide_text_input) == divide_expected_output
 
-    def test_division(self):
-        assert calculate("9/3") == 3.0
+    @pytest.mark.parametrize("remainder_text_input, remainder_expected_output",
+                             [
+                                 ("6~3", (2, 0)),
+                                 ("7~3", (2, 1))
+                             ]
+                             )
 
-    def test_division1(self):
-        assert calculate("8/2") == 4.0
+    def test_division_remainder(self, remainder_text_input, remainder_expected_output):
+        assert calculate(remainder_text_input) == remainder_expected_output
 
-    def test_division_remainder(self):
-        assert calculate("6~3") == (2, 0)
-
-    def test_division_remainder1(self):
-        assert calculate("7~3") == (2, 1)
