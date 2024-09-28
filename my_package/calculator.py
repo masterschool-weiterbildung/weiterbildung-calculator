@@ -37,8 +37,9 @@ def calculate(text_input: str):
     SUBTRACTION, MULTIPLICATION,DIVISION).
 
     Parameters:
-        text_input (str): A string containing a mathematical expression with two operands
-                          and an operation symbol. For example, "45+32" or "100/5".
+        text_input (str): A string containing a mathematical 
+        expression with two operands and an operation symbol. 
+        For example, "45+32" or "100/5".
 
     Returns:
         int or float: The result of the arithmetic operation between the two numbers.
@@ -58,15 +59,21 @@ def calculate(text_input: str):
     return_value = 0.0
 
     if ADDITION in text_input:
-        return_value = addition_numbers(parse_number(text_input, ADDITION))
+        return_value = (addition_numbers
+                        (parse_number(text_input, ADDITION)))
     elif SUBTRACTION in text_input:
-        return_value = subtraction_numbers(parse_number(text_input, SUBTRACTION))
+        return_value = (subtraction_numbers
+                        (parse_number(text_input, SUBTRACTION)))
     elif MULTIPLICATION in text_input:
-        return_value = multiplication_numbers(parse_number(text_input, MULTIPLICATION))
+        return_value = (multiplication_numbers
+                        (parse_number(text_input, MULTIPLICATION)))
     elif INTEGER_REMAINDER_DIVISION in text_input:
-        return_value = division_integer_remainder(parse_number(text_input, INTEGER_REMAINDER_DIVISION))
+        return_value = (division_integer_remainder
+                        (parse_number(text_input,
+                        INTEGER_REMAINDER_DIVISION)))
     else:
-        return_value = division_numbers(parse_number(text_input, DIVISION))
+        return_value = (division_numbers
+                        (parse_number(text_input, DIVISION)))
 
     return return_value
 
